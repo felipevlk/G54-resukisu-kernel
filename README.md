@@ -43,18 +43,14 @@ Além do ReSukiSU + SUSFS, foram aplicados:
 | SUSFS | v2.3.0 (inline hooks) | oculta arquivos/mounts/ksu do userspace |
 | brene | — | config do SUSFS (props, uname spoof, hide) |
 | TrickyStore | 1.4.1 (`5ec1cff`) | atestação de certificado |
-| keybox "mc" | — | corrige o Play Integrity (a keybox `@keyboxstrong` está revogada) |
 | PlayIntegrityFix | v19.9104 | props de integridade |
 | ZygiskNext / ZygiskSU | 1.5.0 | suporte Zygisk |
 | NoMount (metamódulo) | v2.0.0 | gerenciamento de mounts |
 | ZN-AuditPatch | v1.2.0 (`aviraxp`) | corrige o audit SELinux |
 | ksud (uapi fix) | 3.4.0-18 | corrige os scripts de boot dos módulos |
-| vbmeta_disguiser | — | **desativado** |
-| hma_oss_zygisk | — | **desativado** |
 
 ### Configs aplicadas no aparelho
 
-- `/data/adb/tricky_store/keybox.xml` — keybox "mc"
 - `/data/adb/tricky_store/target.txt` — GMS + vending + gsf + gms.unstable + bancopan + detectores
 - `/data/adb/tricky_store/security_patch.txt` — `system=202401 / boot=2024-01-01 / vendor=2024-01-01`
 - `/data/adb/brene/config.sh` — `config_spoof_system_properties=1`, `config_spoof_uname=1`, `config_selinux_hide=1`, `config_su_compat=1`
