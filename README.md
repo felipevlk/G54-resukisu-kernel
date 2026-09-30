@@ -10,6 +10,21 @@ Moto G54 5G (`cancunf`, MT6855), Android 13.
 | SUSFS | v2.3.0 (inline hooks, sem kprobe) |
 | Build source | [`felipevlk/GKI_KernelSU_SUSFS`](https://github.com/felipevlk/GKI_KernelSU_SUSFS) — `root_flavor=ReSukiSU`, `use_susfs=true` |
 
+## Compatibilidade
+
+| Item | Valor |
+|---|---|
+| Aparelho | Moto G54 5G (`cancunf`) |
+| SoC | MediaTek MT6855 (Dimensity 7020/930) |
+| Android | 13 (SDK 33) |
+| Branch do kernel (GKI) | **5.10 `android12`** |
+| Kernel stock (base de origem) | `5.10.168` |
+| Kernel deste build | `5.10.269-android12` |
+| Page size | 4K |
+
+> Este boot é feito para o **Moto G54 5G** com kernel **GKI 5.10 `android12`** e **4K page**.
+> Não usar em outros aparelhos / branches — risco de bootloop.
+
 ## Arquivos (assets da release)
 
 - `1-boot-resukisu-cancunf.img` — boot image pronta (flash via fastbootd).
