@@ -15,7 +15,6 @@ Moto G54 5G (`cancunf`, MT6855), Android 13.
 - `new-boot-resukisu.img` — boot image pronto (flash via fastbootd).
 - `resuki-ak3.zip` — AnyKernel3 flashável (via gerenciador/recovery).
 - `ReSukiSU_v4.2.0-rc3_35187-universal-release.apk` — gerenciador ReSukiSU (instalar após o flash).
-- `boot-fallback-KernelSU-Next.img` — boot de fallback (root anterior, KernelSU-Next). Use só em emergência.
 
 ## Flash
 
@@ -34,11 +33,6 @@ fastboot reboot
 Instale o `ReSukiSU_v4.2.0-rc3_35187-universal-release.apk` (asset desta release) após
 flashear o kernel. Alternativamente, baixe no repo upstream
 [`ReSukiSU/ReSukiSU`](https://github.com/ReSukiSU/ReSukiSU).
-
-## Fallback
-
-Se o ReSukiSU falhar, flashe `boot-fallback-KernelSU-Next.img` (root anterior) para
-restaurar o acesso root. Nesse modo voltam os hooks kprobe (detectáveis).
 
 ---
 
