@@ -10,28 +10,40 @@ Moto G54 5G (`cancunf`, MT6855), Android 13.
 | SUSFS | v2.3.0 (inline hooks, sem kprobe) |
 | Build source | [`felipevlk/GKI_KernelSU_SUSFS`](https://github.com/felipevlk/GKI_KernelSU_SUSFS) (build a partir do fork) — `root_flavor=ReSukiSU`, `use_susfs=true` |
 
-## Arquivos (assets da release)
+## Arquivos (assets da release) — na ordem de uso
 
-- `new-boot-resukisu.img` — boot image pronto (flash via fastbootd).
-- `resuki-ak3.zip` — AnyKernel3 flashável (via gerenciador/recovery).
-- `ReSukiSU_v4.2.0-rc3_35187-universal-release.apk` — gerenciador ReSukiSU (instalar após o flash).
+| # | Arquivo | O que é |
+|---|---|---|
+| 1 | `1-boot-resukisu-cancunf.img` | Boot image com ReSukiSU (flash no celular) |
+| 2 | `2-anykernel3-resuki.zip` | AnyKernel3 (alternativa de flash via recovery/gerenciador) |
+| 3 | `3-gerenciador-resukisu.apk` | Gerenciador ReSukiSU (app do root) |
 
-## Flash
+## Passo a passo
 
+### Passo 1 — Baixar os 3 arquivos
+Baixe os 3 assets acima para o PC.
+
+### Passo 2 — Flashar o kernel (boot image)
 O bootloader da Motorola bloqueia `fastboot flash boot` ("Preflight validation failed").
-Flashear via **fastbootd**:
+Use o **fastbootd**:
 
 ```bash
 adb reboot fastboot
 # se voltar pro bootloader, rode: fastboot reboot fastboot
-fastboot flash boot new-boot-resukisu.img
+fastboot flash boot 1-boot-resukisu-cancunf.img
 fastboot reboot
 ```
 
-## Gerenciador
+### Passo 3 — Instalar o gerenciador
+Com o celular ligado, instale o `3-gerenciador-resukisu.apk` e abra o app para
+conceder/gerenciar o root.
 
-Instale o `ReSukiSU_v4.2.0-rc3_35187-universal-release.apk` (asset desta release) após
-flashear o kernel. Alternativamente, baixe no repo upstream
+> O `2-anykernel3-resuki.zip` é uma **alternativa** ao passo 2: em vez de flashear a
+> imagem direto, dá pra aplicar pelo gerenciador/recovery (AnyKernel3).
+
+## Gerenciador (upstream)
+
+Alternativamente, baixe o manager no repo
 [`ReSukiSU/ReSukiSU`](https://github.com/ReSukiSU/ReSukiSU).
 
 ---
