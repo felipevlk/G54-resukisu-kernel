@@ -83,7 +83,7 @@ Além do ReSukiSU + SUSFS, foram aplicados:
 
 - Play Integrity: **BASIC 🟢 + DEVICE 🟢**
 - Duck Detector: 1 Danger (TEE/KeyMint — hardware)
-- Chunqiu Native Check: 0 (só "USB debugging", temporário)
+- Chunqiu Native Check: 0
 
 ---
 
