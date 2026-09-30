@@ -18,12 +18,20 @@ Moto G54 5G (`cancunf`, MT6855), Android 13.
 | SoC | MediaTek MT6855 (Dimensity 7020/930) |
 | Android | 13 (SDK 33) |
 | Branch do kernel (GKI) | **5.10 `android12`** |
-| Kernel stock (base de origem) | `5.10.168` |
-| Kernel deste build | `5.10.269-android12` |
+| Kernel stock (base de origem) | `5.10.168` (patch-level da Motorola) |
+| Kernel deste build | `5.10.269-android12` (LTS atual do branch) |
 | Page size | 4K |
 
-> Este boot é feito para o **Moto G54 5G** com kernel **GKI 5.10 `android12`** e **4K page**.
+> O boot é feito para o **Moto G54 5G** com kernel **GKI 5.10 `android12`** e **4K page**.
 > Não usar em outros aparelhos / branches — risco de bootloop.
+
+### Por que `.168` virou `.269`?
+
+O flash substitui o kernel pelo **GKI (Generic Kernel Image)** compilado do branch
+`android12-5.10`. O build usa o **LTS mais recente** desse branch — hoje `5.10.269`
+(o `5.10.168` era o snapshot fixado pela Motorola). Como o GKI é genérico, os drivers
+do SoC MT6855 continuam vindo dos **módulos vendor** (em `/vendor`, intactos), então a
+troca de patch-level **não quebra** o hardware.
 
 ## Arquivos (assets da release)
 
